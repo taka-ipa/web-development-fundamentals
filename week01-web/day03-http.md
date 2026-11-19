@@ -20,6 +20,12 @@ GETは主にURLで「何が欲しいか」を指定し、POSTは主にBodyで「
 ・ボディ　サーバーへ送るデータ本体
 
 4.HTTPレスポンスのStatus Code・Header・Bodyの役割をそれぞれ説明してください。
-
+・Status Code　処理結果を数字で表す。201 は作成成功。
+・Header　返すデータの形式などの追加情報。
+・Body　クライアントへ返すデータ
 
 5.Next.jsからLaravel APIを使って試合データをMySQLに保存するまでの流れを、HTTPリクエスト・SQL・HTTPレスポンスという言葉を使って説明してください。
+・Next.jsがLaravelのAPIに POST /api/matches を送信
+・Laravelがバリデーションなどを行い、MySQLにINSERT
+・MySQLの保存結果をLaravelが受け取る
+・LaravelがNext.jsにHTTPレスポンスを返す
